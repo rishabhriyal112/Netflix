@@ -1,0 +1,40 @@
+.search-container {
+  position: relative;
+  display: inline-block;
+}
+
+.search-container input {
+  padding: 8px;
+  width: 220px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #141414;
+  border: 1px solid #333;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.search-item {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.search-item img {
+  width: 40px;
+  border-radius: 4px;
+}
+
+.search-item:hover {
+  background: #222;
+}

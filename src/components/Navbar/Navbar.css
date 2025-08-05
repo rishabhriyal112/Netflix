@@ -1,0 +1,205 @@
+.navbar {
+    width: 100%;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    font-size: 14px;
+    color: #e5e5e5;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 10%, transparent);
+    z-index: 10;
+    transition: background 0.3s ease;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar-left img {
+    width: 90px;
+    cursor: pointer;
+}
+
+.navbar-left ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.navbar-left li{
+    text-decoration: none;
+}
+.navbar-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navbar-right .icons {
+    width: 20px;
+    cursor: pointer;
+}
+
+.navbar-right .profile {
+    border-radius: 4px;
+    width: 28px;
+}
+
+.navbar-profile {
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    align-items: center;
+    position: relative;
+}
+
+.navbar .dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: max-content;
+    background: #191919;
+    padding: 18px 22px;
+    border-radius: 2px;
+    text-decoration: underline;
+    z-index: 1;
+    display: none;
+}
+
+.navbar .dropdown p {
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.navbar-profile:hover .dropdown {
+    display: block;
+}
+
+.nav-dark {
+    background: #141414;
+}
+
+/* ✅ Responsive tweaks for existing elements */
+@media (max-width: 1024px) {
+    .navbar-left ul {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        padding: 15px 4%;
+    }
+
+    .navbar-left img {
+        width: 70px;
+    }
+
+    .navbar-right .icons {
+        width: 18px;
+    }
+
+    .navbar-right {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar-left img {
+        width: 60px;
+    }
+
+    .navbar-right .profile {
+        width: 24px;
+    }
+}
+
+/* ✅ --- Newly Added / Updated Classes --- */
+
+/* Hamburger menu for mobile */
+.hamburger {
+    display: none;
+    
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 20;
+    margin-right: 10px; /* 🔥 Adds small gap between hamburger & logo */
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Animate hamburger into a cross when active */
+.hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile slide-in menu */
+.mobile-menu {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    height: 100%;
+    background: #141414;
+    flex-direction: column;
+    padding: 80px 20px;
+    gap: 20px;
+    z-index: 15;
+    transition: left 0.3s ease;
+}
+
+.mobile-menu li {
+    list-style: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+.mobile-menu.show {
+    left: 0;
+}
+
+/* 🔥 New class for logo */
+.logo-img {
+    width: 90px;
+    cursor: pointer;
+}
+
+/* 🔥 Adjust layout for mobile/tablet */
+@media (max-width: 1024px) {
+    .navbar-left {
+        gap: 10px; /* Reduced gap */
+    }
+    .hamburger {
+      
+        display: flex;
+        order: -1; /* Hamburger first on mobile/tablet */
+    }
+}
+
+.home{
+    text-decoration: none;   /* removes underline */
+    color: white;
+}
