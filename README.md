@@ -8,7 +8,7 @@
 A full-featured Netflix clone built with React.js and Firebase, fetching real movie data from TMDB API.
 It includes authentication, search functionality, movie/TV show browsing, player page for trailers, responsive design, and more.
 
-🔗 **Live Website:** [https://netflix-zone.vercel.app/](https://netflix-zone.vercel.app/)
+🔗 **Live Website:** [https://netflix-zone.vercel.app/](https://watch-fly.vercel.app/)
 
 ## 🖥️ Preview
 
