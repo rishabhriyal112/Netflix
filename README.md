@@ -43,16 +43,16 @@ It includes authentication, search functionality, movie/TV show browsing, player
 ---
 ##⚡ Installation & Usage
 
-# Clone the repository
+- Clone the repository
 git clone https://github.com/your-username/netflix-clone.git
 
-# Navigate to project folder
+- Navigate to project folder
 cd netflix-clone
 
-# Install dependencies
+- Install dependencies
 npm install
 
-# Run the project
+- Run the project
 npm run dev
 
 
@@ -102,4 +102,3 @@ Pull requests are welcome!
 
 This project is licensed under the [MIT License](LICENSE).
 
-```
