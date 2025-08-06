@@ -35,13 +35,15 @@ const Navbar = () => {
           <div></div>
           <div></div>
         </div>
-        <img src={logo} alt="Netflix Logo" className="logo-img" />
+
+        <Link to="/" className="list"><img src={logo} alt="Netflix Logo" className="logo-img" /></Link>
+
         <ul>
-          <li className="Home"><Link to="/" className="home">Home</Link></li>
-          <li>TV Shows</li>
-          <li>Movies</li>
-          <li>New & Popular</li>
-          <li>Browse by language</li>
+          <li ><Link to="/" className="list">Home</Link></li>
+          <li ><Link to="/tvshows" className="list">TV Shows</Link></li>
+          <li><Link to="/movies" className="list">Movies</Link></li>
+          <li><Link to="/newpopular" className="list">New & Popular</Link></li>
+
         </ul>
       </div>
 
@@ -49,7 +51,7 @@ const Navbar = () => {
         {/* ✅ SearchBar integrated here */}
         <SearchBar onSelectMovie={(id) => console.log("clicked movie id:", id)} />
 
-        <p>Children</p>
+        
         <img src={bell_icon} alt="Notifications" className="icons" />
 
         <div className="navbar-profile">
@@ -63,11 +65,10 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       <div className={`mobile-menu ${menuOpen ? "show" : ""}`}>
-        <li onClick={() => setMenuOpen(false)}>Home</li>
-        <li onClick={() => setMenuOpen(false)}>TV Shows</li>
-        <li onClick={() => setMenuOpen(false)}>Movies</li>
-        <li onClick={() => setMenuOpen(false)}>New & Popular</li>
-        <li onClick={() => setMenuOpen(false)}>Browse by language</li>
+        <Link to="/" className="list" onClick={() => setMenuOpen(false)}>Home</Link>
+        <Link to="/tvshows" className="list" onClick={() => setMenuOpen(false)}>TV Shows</Link>
+        <Link to="/movies" className="list" onClick={() => setMenuOpen(false)}>Movies</Link>
+        <Link to="/newpopular" className="list" onClick={() => setMenuOpen(false)}>New & Popular</Link>
       </div>
     </div>
   );

@@ -7,6 +7,8 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase";
 import { ToastContainer  } from 'react-toastify';
 import Movies from "./pages/Movies/Movies";
+import TV_Shows from "./pages/TV_Shows/TV_Shows";
+import New_Popular from "./pages/New_Popular/New_Popular";
 
 
 const App = () => {
@@ -17,7 +19,9 @@ const App = () => {
     onAuthStateChanged(auth , async (user) => {
       if(user){
         console.log("Logged In");
-        navigate('/')
+        if (window.location.pathname === '/login') {
+        navigate('/');
+      }
       }
       else{
         console.log("Logged Out");
@@ -33,7 +37,9 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/player/:id" element={<Player/>}/>
+        <Route path="/tvshows" element={<TV_Shows/>}/>
         <Route path="/movies" element={<Movies/>}/>
+        <Route path="/newpopular" element={<New_Popular/>} />
       </Routes>
       
     </div>

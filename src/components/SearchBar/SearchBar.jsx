@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./SearchBar.css";
+import search_icon from "../../assets/search_icon.svg";
 
-const SearchBar = ({ onSelectMovie }) => {
+const SearchBar = () => {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
 
-  // 🔑 TMDB Bearer token (from your snippet)
+  // 🔑 TMDB Bearer token
   const options = {
     method: "GET",
     headers: {
@@ -17,7 +18,7 @@ const SearchBar = ({ onSelectMovie }) => {
 
   // 🔎 Fetch movies when hitting Enter
   const handleKeyDown = (e) => {
-    if (e.key === "Enter") {
+    if (e.key === "Enter" && query.trim()) {
       fetch(
         `https://api.themoviedb.org/3/search/movie?query=${query}&include_adult=false&language=en-US&page=1`,
         options
@@ -30,6 +31,9 @@ const SearchBar = ({ onSelectMovie }) => {
 
   return (
     <div className="search-container">
+      {/* 🔍 Search Icon */}
+      
+
       <input
         type="text"
         placeholder="Search movies..."
@@ -37,7 +41,9 @@ const SearchBar = ({ onSelectMovie }) => {
         onChange={(e) => setQuery(e.target.value)}
         onKeyDown={handleKeyDown}
       />
-
+      
+      <img src={search_icon} alt="Search Icon" className="search-icon" />
+      
       {/* 🔽 Dropdown results */}
       {results.length > 0 && (
         <div className="search-results">
@@ -45,7 +51,13 @@ const SearchBar = ({ onSelectMovie }) => {
             <div
               key={movie.id}
               className="search-item"
-              onClick={() => onSelectMovie && onSelectMovie(movie.id)}
+              // ✅ Opens TMDB page for that movie
+              onClick={() =>
+                window.open(
+                  `https://www.themoviedb.org/movie/${movie.id}`,
+                  "_blank"
+                )
+              }
             >
               {movie.poster_path && (
                 <img

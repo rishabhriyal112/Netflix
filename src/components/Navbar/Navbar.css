@@ -19,8 +19,9 @@
 }
 
 .navbar-left img {
-    width: 90px;
+    width: 91px;
     cursor: pointer;
+    margin-top: 3px;
 }
 
 .navbar-left ul {
@@ -199,7 +200,7 @@
     }
 }
 
-.home{
+.list{
     text-decoration: none;   /* removes underline */
     color: white;
 }

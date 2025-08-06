@@ -1,0 +1,54 @@
+.movies-page {
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.movies-hero{
+   background-image: 
+  linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+  url('/background_banner.jpg');
+   
+}
+
+/* ✅ Header Section */
+.movies-header {
+  padding: 120px 6% 1px; /* extra top padding to avoid navbar overlap */
+}
+
+.movies-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.movies-header p {
+  color: #b3b3b3;
+  font-size: 1rem;
+}
+
+/* ✅ Movie Sections */
+.movies-sections {
+  padding: 20px 6%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ✅ Responsive Adjustments */
+@media (max-width: 768px) {
+  .movies-header h1 {
+    font-size: 2rem;
+  }
+
+  .movies-sections {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .movies-header h1 {
+    font-size: 1.8rem;
+  }
+  .movies-header p {
+    font-size: 0.9rem;
+  }
+}

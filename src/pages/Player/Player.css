@@ -13,8 +13,8 @@
 /* Back Arrow */
 .player img {
   position: absolute;
-  top: 95px;
-  left: 200px;
+  top: 130px;
+  left: 140px;
   width: 35px;
   cursor: pointer;
   transition: transform 0.3s ease;
