@@ -3,7 +3,7 @@
 ![React](https://img.shields.io/badge/React-19.1-blue)
 ![Firebase](https://img.shields.io/badge/Firebase-12.0-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
-[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-000?style=for-the-badge&logo=vercel&logoColor=white)](https://netflix-zone.vercel.app/)
+
 
 A responsive **Netflix Clone** built with **React.js** and **Firebase**, featuring user authentication, movie browsing, and a custom video player. This application provides a Netflix-like experience with a modern UI and smooth navigation.
 
