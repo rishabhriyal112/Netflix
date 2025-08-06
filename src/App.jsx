@@ -6,6 +6,7 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase";
 import { ToastContainer  } from 'react-toastify';
+import Movies from "./pages/Movies/Movies";
 
 
 const App = () => {
@@ -32,6 +33,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/player/:id" element={<Player/>}/>
+        <Route path="/movies" element={<Movies/>}/>
       </Routes>
       
     </div>
