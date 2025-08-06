@@ -4,18 +4,21 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(#0000007e, #0000007e), url(/src/assets/player_background.png);
+  background-image: linear-gradient(#000000c5, #000000c5), url(/src/assets/player_background.png);
   background-size: cover;
   background-position: center;
   padding: 20px;
 }
 
-/* Back Arrow */
+/* 🎬 Back Arrow (Desktop Updated) */
 .player img {
   position: absolute;
   top: 130px;
-  left: 140px;
-  width: 35px;
+  /* moved up for better alignment */
+  left: 200px;
+  /* closer to edge */
+  width: 32px;
+  /* slightly smaller */
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -24,21 +27,22 @@
   transform: scale(1.1);
 }
 
-/* Responsive YouTube Player */
+/* 🎥 Responsive YouTube Player */
 .player iframe {
-  width: 90%;
-  aspect-ratio: 16 / 9;  /* keeps video ratio */
+  width: 85%;
+  aspect-ratio: 16 / 9;
+  /* keeps video ratio */
   border-radius: 10px;
   border: 2px solid white;
   max-width: 1000px;
 }
 
-/* Player Info */
+/* 📝 Player Info */
 .player-info {
   margin-top: 20px;
   display: flex;
   gap: 10px;
-  width: 90%;
+  width: 85%;
   max-width: 600px;
   align-items: center;
   justify-content: center;
@@ -55,11 +59,16 @@
   font-size: 1rem;
 }
 
-/* 📱 Mobile & Tablet */
+/* 📱 Tablet */
 @media (max-width: 768px) {
   .player img {
-    top: 50px;
-    width: 30px;
+    top: 290px;
+    left: 50px;
+    width: 38px;
+  }
+
+  .player iframe {
+    width: 90%;
   }
 
   .info-item {
@@ -72,16 +81,23 @@
 /* 📱 Small Phones */
 @media (max-width: 480px) {
   .player img {
-    top: 40px;
-    width: 28px;
+    top: 200px;
+    left: 20px;
+    width: 26px;
+  }
+
+  .player iframe {
+    width: 95%;
   }
 
   .player-info {
     gap: 8px;
+    flex-direction: column;
+    text-align: center;
   }
 
   .info-item {
     font-size: 0.85rem;
     padding: 4px 8px;
   }
-}
+} 
