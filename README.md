@@ -6,7 +6,7 @@
 
 A responsive **Netflix Clone** built with **React.js** and **Firebase**, featuring user authentication, movie browsing, and a custom video player. This application provides a Netflix-like experience with a modern UI and smooth navigation.
 
-🔗 **Live Website:** [https://netflix-zone.vercel.app/](https://netflix-zone.vercel.app/)
+🔗 **Live Website:** [https://watch-fly.vercel.app/](https://watch-fly.vercel.app/)
 
 ## 🖥️ Preview
 
@@ -26,16 +26,19 @@ A responsive **Netflix Clone** built with **React.js** and **Firebase**, featuri
 ✅ Protected Routes – Redirects unauthenticated users to login.
 ✅ Footer with Useful Links – Responsive design.
 ✅ Dark Overlay Backgrounds – Netflix-like visuals for hero sections.
+✅ Security Features – XSS protection and secure credential management.
 
 ---
 
 ## 🛠️ Tech Stack
-- Frontend: React.js, CSS (Responsive)
-- Backend: Firebase Authentication, Firebase Firestore
-- API: TMDB API
-- Routing: React Router v6
-- Notifications: React Toastify
-- Deployment: Vercel
+- **Frontend:** React.js 19.1, CSS (Responsive)
+- **Backend:** Firebase Authentication, Firebase Firestore
+- **API:** TMDB API
+- **Routing:** React Router v7
+- **Notifications:** React Toastify
+- **Build Tool:** Vite
+- **Deployment:** Vercel
+- **Security:** XSS protection, Environment variables
 
 
 
@@ -51,6 +54,7 @@ Before you begin, ensure you have met the following requirements:
 
 ### Installation
 
+```bash
 # Clone the repository
 git clone https://github.com/your-username/netflix-clone.git
 
@@ -60,8 +64,30 @@ cd netflix-clone
 # Install dependencies
 npm install
 
+# Create environment file
+cp .env.example .env
+
+# Add your API keys to .env file
+# VITE_FIREBASE_API_KEY=your_firebase_api_key
+# VITE_TMDB_API_TOKEN=your_tmdb_api_token
+
 # Run the project
 npm run dev
+```
+
+### Environment Variables
+
+Create a `.env` file in the root directory and add:
+
+```env
+VITE_FIREBASE_API_KEY=your_firebase_api_key
+VITE_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
+VITE_FIREBASE_PROJECT_ID=your_firebase_project_id
+VITE_FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
+VITE_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+VITE_FIREBASE_APP_ID=your_firebase_app_id
+VITE_TMDB_API_TOKEN=your_tmdb_api_token
+```
 
 ## 🗂️ Project Structure
 

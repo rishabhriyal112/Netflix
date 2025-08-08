@@ -16,7 +16,7 @@ const TitleCards = ({
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxZDkyZGJlM2VhZGRlOWE3YTZmZmRjZGI4Y2EwZTg2MiIsIm5iZiI6MTc1NDM5MDUwNi40ODcsInN1YiI6IjY4OTFkZmVhZjc0MTA0NTU2YTI2Mjg4ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.CI-LhPOhU09HkuBwvUkSxSNl4fQx5HEtl9zqiXSJT2k'
+      Authorization: `Bearer ${import.meta.env.VITE_TMDB_API_TOKEN}`
     }
   };
 
