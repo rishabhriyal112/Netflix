@@ -4,8 +4,10 @@
 ![Firebase](https://img.shields.io/badge/Firebase-12.0-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-A responsive **Netflix Clone** built with **React.js** and **Firebase**, featuring user authentication, movie browsing, and a custom video player. This application provides a Netflix-like experience with a modern UI and smooth navigation.
+A full-featured Netflix clone built with React.js and Firebase, fetching real movie data from TMDB API.
+It includes authentication, search functionality, movie/TV show browsing, player page for trailers, responsive design, and more.
 
+🔗 **Live Website:** [https://watch-fly.vercel.app/](https://watch-fly.vercel.app/)
 🔗 **Live Website:** [https://watch-fly.vercel.app/](https://watch-fly.vercel.app/)
 
 ## 🖥️ Preview
