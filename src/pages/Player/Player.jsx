@@ -26,7 +26,7 @@ const Player = () => {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: `Bearer ${import.meta.env.VITE_TMDB_BEARER_AUTH}`
+      Authorization: `Bearer ${import.meta.env.VITE_TMDB_MOVIE_DB}`
     }
   };
 
