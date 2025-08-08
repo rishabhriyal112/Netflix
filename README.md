@@ -8,7 +8,6 @@ A full-featured Netflix clone built with React.js and Firebase, fetching real mo
 It includes authentication, search functionality, movie/TV show browsing, player page for trailers, responsive design, and more.
 
 🔗 **Live Website:** [https://watch-fly.vercel.app/](https://watch-fly.vercel.app/)
-🔗 **Live Website:** [https://watch-fly.vercel.app/](https://watch-fly.vercel.app/)
 
 ## 🖥️ Preview
 
