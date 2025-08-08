@@ -10,15 +10,11 @@
   padding: 20px;
 }
 
-/* 🎬 Back Arrow (Desktop Updated) */
 .player img {
   position: absolute;
   top: 130px;
-  /* moved up for better alignment */
   left: 200px;
-  /* closer to edge */
   width: 32px;
-  /* slightly smaller */
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -27,17 +23,14 @@
   transform: scale(1.1);
 }
 
-/* 🎥 Responsive YouTube Player */
 .player iframe {
   width: 85%;
   aspect-ratio: 16 / 9;
-  /* keeps video ratio */
   border-radius: 10px;
   border: 2px solid white;
   max-width: 1000px;
 }
 
-/* 📝 Player Info */
 .player-info {
   margin-top: 20px;
   display: flex;
@@ -59,7 +52,40 @@
   font-size: 1rem;
 }
 
-/* 📱 Tablet */
+.video-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  width: 85%;
+  max-width: 500px;
+}
+
+.video-error h2 {
+  margin-bottom: 15px;
+  color: #e50914;
+}
+
+.back-btn {
+  background: #e50914;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.back-btn:hover {
+  background: #b8070f;
+}
+
 @media (max-width: 768px) {
   .player img {
     top: 290px;
@@ -78,7 +104,6 @@
   }
 }
 
-/* 📱 Small Phones */
 @media (max-width: 480px) {
   .player img {
     top: 200px;
@@ -100,4 +125,4 @@
     font-size: 0.85rem;
     padding: 4px 8px;
   }
-} 
+}

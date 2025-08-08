@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import './Player.css'
+import back_arrow_icon from '../../assets/back_arrow_icon.png'
 import { useNavigate, useParams } from 'react-router-dom'
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
-const Player = () => {
 
+const Player = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -14,17 +15,18 @@ const Player = () => {
     published_at: "",
     type: ""
   })
+  const [videoError, setVideoError] = useState(false);
 
-  // Sanitize function to prevent XSS
   const sanitizeText = (text) => {
     if (!text) return "";
     return text.replace(/[<>"'&]/g, '');
   };
+
   const options = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: `Bearer ${import.meta.env.VITE_TMDB_API_TOKEN || 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxZDkyZGJlM2VhZGRlOWE3YTZmZmRjZGI4Y2EwZTg2MiIsIm5iZiI6MTc1NDM5MDUwNi40ODcsInN1YiI6IjY4OTFkZmVhZjc0MTA0NTU2YTI2Mjg4ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.CI-LhPOhU09HkuBwvUkSxSNl4fQx5HEtl9zqiXSJT2k'}`
+      Authorization: `Bearer ${import.meta.env.VITE_TMDB_API_TOKEN}`
     }
   };
 
@@ -32,40 +34,57 @@ const Player = () => {
     fetch(`https://api.themoviedb.org/3/movie/${id}/videos?language=en-US`, options)
       .then(response => response.json())
       .then(response => {
-        if (response.results && response.results[0]) {
-          setApiData(response.results[0]);
+        if (response.results && response.results.length > 0) {
+          const trailer = response.results.find(video => 
+            video.type === 'Trailer' || video.type === 'Teaser'
+          ) || response.results[0];
+          setApiData(trailer);
+        } else {
+          setVideoError(true);
         }
       })
-      .catch(err => console.error('API Error:', err));
+      .catch(err => {
+        console.error('API Error:', err);
+        setVideoError(true);
+      });
   }, [id])
 
   return (
     <div>
-    <Navbar/>
-    
-    <div className='player'>
-      
-      
-      <br/> <br/> 
-      <h1 className='info-item'>{sanitizeText(apiData.name)}</h1>
-      <br/>
-      <iframe 
-        width='90%' 
-        height='90%' 
-        src={`https://www.youtube.com/embed/${sanitizeText(apiData.key)}`} 
-        title='trailer' 
-        frameBorder='0' 
-        allowFullScreen
-        sandbox="allow-scripts allow-same-origin"
-      ></iframe>
-      
-      <div className="player-info">
-        <h1 className='info-item'>Date: {sanitizeText(apiData.published_at?.slice(0, 10))}</h1>
-        <h1 className='info-item'>Type: {sanitizeText(apiData.type)}</h1>
+      <Navbar/>
+      <div className='player'>
+        <img src={back_arrow_icon} alt="" onClick={() => {navigate(-2)}} />
+        <br/><br/> 
+        <h1 className='info-item'>{sanitizeText(apiData.name)}</h1>
+        <br/>
+        
+        {videoError || !apiData.key ? (
+          <div className="video-error">
+            <h2>Video Not Available</h2>
+            <p>Sorry, the trailer for this movie is not available.</p>
+            <button onClick={() => navigate(-1)} className="back-btn">
+              Go Back
+            </button>
+          </div>
+        ) : (
+          <iframe 
+            width='90%' 
+            height='90%' 
+            src={`https://www.youtube.com/embed/${sanitizeText(apiData.key)}?rel=0&modestbranding=1`} 
+            title='trailer' 
+            frameBorder='0' 
+            allowFullScreen
+            sandbox="allow-scripts allow-same-origin"
+            onError={() => setVideoError(true)}
+          />
+        )}
+        
+        <div className="player-info">
+          <h1 className='info-item'>Date: {sanitizeText(apiData.published_at?.slice(0, 10))}</h1>
+          <h1 className='info-item'>Type: {sanitizeText(apiData.type)}</h1>
+        </div>
       </div>
-      
-    </div>
-    <Footer/>
+      <Footer/>
     </div>
   )
 }
