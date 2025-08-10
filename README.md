@@ -1,15 +1,15 @@
-# 🎬 Netflix Clone
+****# 🎬 Netflix Clone****
 
 ![React](https://img.shields.io/badge/React-19.1-blue)
 ![Firebase](https://img.shields.io/badge/Firebase-12.0-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-A full-featured Netflix clone built with React.js and Firebase, fetching real movie data from TMDB API.
-It includes authentication, search functionality, movie/TV show browsing, player page for trailers, responsive design, and more.
+**A full-featured Netflix clone built with React.js and Firebase, fetching real movie data from TMDB API.
+It includes authentication, search functionality, movie/TV show browsing, player page for trailers, responsive design, and more.**
 
 🔗 **Live Website:** [https://watch-fly.vercel.app/](https://watch-fly.vercel.app/)
 
-## 🖥️ Preview
+**## 🖥️ Preview**
 
 ![Netflix Clone UI](./public/UI.png)
 
@@ -17,17 +17,17 @@ It includes authentication, search functionality, movie/TV show browsing, player
 
 ## 🎯 Key Features
 
-- ✅ User Authentication – Sign up, Login, Logout using Firebase.
-- ✅ Firebase Firestore Integration – Store and manage user data.
-- ✅ Responsive Navbar – Includes hamburger menu for tablets and mobile.
-- ✅ Search Functionality – Search movies using TMDB API with live dropdown results.
-- ✅ Movies & TV Shows Pages – Browse top-rated, trending, and new content.
-- ✅ Player Page – Watch movie trailers (YouTube embed).
-- ✅ Dynamic Routing – Each movie card links to its player page using react-router-dom.
-- ✅ Protected Routes – Redirects unauthenticated users to login.
-- ✅ Footer with Useful Links – Responsive design.
-- ✅ Dark Overlay Backgrounds – Netflix-like visuals for hero sections.
-- ✅ Security Features – XSS protection and secure credential management.
+- **✅ User Authentication** – Sign up, Login, Logout using Firebase.
+- **✅ Firebase Firestore Integration** – Store and manage user data.
+- **✅ Responsive Navbar** – Includes hamburger menu for tablets and mobile.
+- **✅ Search Functionality** – Search movies using TMDB API with live dropdown results.
+- **✅ Movies & TV Shows Pages** – Browse top-rated, trending, and new content.
+- **✅ Player Page** – Watch movie trailers (YouTube embed).
+- **✅ Dynamic Routing** – Each movie card links to its player page using react-router-dom.
+- **✅ Protected Routes **– Redirects unauthenticated users to login.
+- **✅ Footer with Useful Links** – Responsive design.
+- **✅ Dark Overlay Backgrounds** – Netflix-like visuals for hero sections.
+- **✅ Security Features** – XSS protection and secure credential management.
 
 ---
 
