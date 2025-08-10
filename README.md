@@ -17,17 +17,17 @@ It includes authentication, search functionality, movie/TV show browsing, player
 
 ## 🎯 Key Features
 
-✅ User Authentication – Sign up, Login, Logout using Firebase.
-✅ Firebase Firestore Integration – Store and manage user data.
-✅ Responsive Navbar – Includes hamburger menu for tablets and mobile.
-✅ Search Functionality – Search movies using TMDB API with live dropdown results.
-✅ Movies & TV Shows Pages – Browse top-rated, trending, and new content.
-✅ Player Page – Watch movie trailers (YouTube embed).
-✅ Dynamic Routing – Each movie card links to its player page using react-router-dom.
-✅ Protected Routes – Redirects unauthenticated users to login.
-✅ Footer with Useful Links – Responsive design.
-✅ Dark Overlay Backgrounds – Netflix-like visuals for hero sections.
-✅ Security Features – XSS protection and secure credential management.
+- ✅ User Authentication – Sign up, Login, Logout using Firebase.
+- ✅ Firebase Firestore Integration – Store and manage user data.
+- ✅ Responsive Navbar – Includes hamburger menu for tablets and mobile.
+- ✅ Search Functionality – Search movies using TMDB API with live dropdown results.
+- ✅ Movies & TV Shows Pages – Browse top-rated, trending, and new content.
+- ✅ Player Page – Watch movie trailers (YouTube embed).
+- ✅ Dynamic Routing – Each movie card links to its player page using react-router-dom.
+- ✅ Protected Routes – Redirects unauthenticated users to login.
+- ✅ Footer with Useful Links – Responsive design.
+- ✅ Dark Overlay Backgrounds – Netflix-like visuals for hero sections.
+- ✅ Security Features – XSS protection and secure credential management.
 
 ---
 
